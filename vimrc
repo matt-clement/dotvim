@@ -25,6 +25,8 @@ set numberwidth=4
 set number
 set wrap
 
+nnoremap <silent><leader>n :set rnu! <cr>
+
 "Commands
 if has("user_commands")
 	command! -bang -nargs=? -complete=file E e<bang> <args>
