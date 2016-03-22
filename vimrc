@@ -59,8 +59,7 @@ nnoremap <leader>w :w<cr>
 iabbrev adn and
 iabbrev waht what
 iabbrev tehn then
-
-iabbrev @@ mclement@fiksu.com
-iabbrev ssig -- <cr>Matt Clement<cr>mclement@fiksu.com
+iabbrev Lenght Length
+iabbrev lenght length
 
 
