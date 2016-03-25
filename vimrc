@@ -47,6 +47,7 @@ noremap <down> ddp
 noremap <right> <esc>0i<tab><esc>
 noremap <left> <esc>0x
 
+noremap <leader>/ :let @/ = ""<cr>
 inoremap <leader><c-u> <esc>bveUeli
 inoremap {<cr> {<cr><cr>}<esc>ki<tab>
 nnoremap <leader><c-u> viwUel
