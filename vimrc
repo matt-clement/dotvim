@@ -27,6 +27,9 @@ set wrap
 
 nnoremap <silent><leader>n :set rnu! <cr>
 
+set modeline
+set modelines=5
+
 "Commands
 if has("user_commands")
 	command! -bang -nargs=? -complete=file E e<bang> <args>
@@ -47,6 +50,7 @@ noremap <down> ddp
 noremap <right> <esc>0i<tab><esc>
 noremap <left> <esc>0x
 
+noremap <C-J> ciw<C-r>0<ESC>
 noremap <leader>/ :let @/ = ""<cr>
 inoremap <leader><c-u> <esc>bveUeli
 inoremap {<cr> {<cr><cr>}<esc>ki<tab>
@@ -55,6 +59,10 @@ nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 vnoremap <leader>" <esc>`<i"<esc>`><esc>a"<esc>
 nnoremap <leader>w :w<cr>
+noremap <leader>g :grep "\b<C-R><C-W>\b"<CR>:cw<CR><CR>
+noremap <leader>j :cn<CR>
+noremap <leader>k :cp<CR>
+noremap <leader>c :ccl<CR>
 
 "Abbreviations
 iabbrev adn and
@@ -63,4 +71,7 @@ iabbrev tehn then
 iabbrev Lenght Length
 iabbrev lenght length
 
-
+if executable('rg')
+  set grepprg=rg\ --vimgrep
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+endif
